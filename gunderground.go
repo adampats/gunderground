@@ -59,7 +59,6 @@ func readConfig() string {
 }
 
 func getWeather(key string, location []string) {
-  //city := "http://api.wunderground.com/api/ef11d4f7b98252f9/conditions/q/WA/Seattle.json"
   urlpath := "http://api.wunderground.com/api/" + key + "/conditions/q/" +
   location[1] + "/" + location[0] + ".json"
   response, err := http.Get(urlpath)
